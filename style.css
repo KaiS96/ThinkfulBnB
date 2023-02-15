@@ -209,10 +209,13 @@ footer p {
   #host > div {
     display: flex;
     flex-direction: row;
+  }
+
+  .grid {
     align-items: center;
   }
 
-  #host > .grid > * {
-    width: 50%;
+  #host > .grid > .hosting > * {
+    width: 100%;
   }
 }
