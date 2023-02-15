@@ -31,7 +31,7 @@ section.alternate-background {
 }
 
 main img {
-  width: 100px;
+  width: 100%;
 }
 
 /* ---  Groups & Items --- */
@@ -60,7 +60,7 @@ header {
 
 .logo {
   font-family: "Pangolin", cursive;
-  font-size: 72px;
+  font-size: 60px;
   color: #fff;
 }
 
@@ -79,7 +79,22 @@ header nav ul li a:hover {
   text-decoration: none;
 }
 
+#menu {
+  display: flex;
+  justify-content: center;
+}
+
+#menu > li {
+  font-size: 14px;
+  padding-bottom: 10px;
+}
+
 /* -------  Search Form ------- */
+form div {
+  display: flex;
+  justify-content: space-between;
+}
+
 form {
   border: 2px solid #ff385c;
   padding: 10px;
@@ -104,6 +119,17 @@ form button {
   width: 100%;
 }
 
+#about > div {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+#host > div {
+  display: flex;
+  flex-direction: column;
+}
+
 /* -------  Footer ------- */
 
 footer {
@@ -117,3 +143,76 @@ footer p {
 }
 
 /* -------  Media Query ------- */
+@media all and (min-width: 480px) {
+  header {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .logo {
+    font-size: 45px;
+  }
+
+  form > div {
+    flex-direction: column;
+  }
+
+  form {
+    display: flex;
+    gap: 10px;
+  }
+
+  form > div, form > button {
+    width: 20%;
+  }
+
+  form input, form select {
+    width: 75%;
+    font-size: 10px;
+  }
+
+  form label {
+    font-size: 12px;
+  }
+
+  form button {
+    font-size: 20px;
+  }
+
+  #about > div {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+  }
+
+  #about > div > img, #about > div > p {
+    width: 33%;
+  }
+
+  #about > div {
+    align-items: center;
+  }
+  
+  .grid {
+    display: flex;
+    gap: 10px;
+  }
+
+  .grid > div {
+    flex: 1;
+  }
+
+  #ideas-img {
+    height: 400px;
+  }
+
+  #host > div {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+  }
+
+  #host > .grid > * {
+    width: 50%;
+  }
+}
