@@ -182,11 +182,27 @@ footer p {
   #about > div {
     display: flex;
     flex-direction: row;
-    gap: 10px;
+    flex: 1;
+  }
+ 
+  #about > div > div > img {
+    width: 50%;
   }
 
-  #about > div > img, #about > div > p {
-    width: 33%;
+  /* #about > div > div > p {
+    width: 50%;
+  }  */
+
+
+  .photo {
+    display: flex;
+    flex: 2;
+    gap: 10px;
+    margin-right: 10px;
+  }
+
+  .item-double {
+    margin-left: 10px;
   }
 
   #about > div {
